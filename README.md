@@ -60,19 +60,26 @@ D7 = X Y Z
 
 
 ### PROGRAM 
-/*
+```
 Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by: V.Prithviraj
+RegisterNumber:212222100038  
 
-
+module enc(d0,d1,d2,d3,d4,d5,d6,d7,a,b,c);
+input d0,d1,d2,d3,d4,d5,d6,d7;
+output a,b,c;
+or(a,d4,d5,d6,d7);
+or(b,d2,d3,d6,d7);
+or(c,d1,d3,d5,d7);
+endmodule
+```
 
 
 
 
 ### RTL LOGIC  
 
+![image](https://github.com/prithviraj5703/Experiment-08-Encoders-and-decoders-/assets/121418418/5ae423ce-d228-41b9-ba26-7802c0f661c1)
 
 
 
@@ -82,15 +89,43 @@ RegisterNumber:
 
 ### TIMING DIGRAMS  
 
+![image](https://github.com/prithviraj5703/Experiment-08-Encoders-and-decoders-/assets/121418418/93842a81-e9c9-4471-9e56-681ce01d40c4)
 
 
 
 
 ### TRUTH TABLE 
 
+![image](https://github.com/prithviraj5703/Experiment-08-Encoders-and-decoders-/assets/121418418/366204f7-8f29-4154-b6aa-a5a7c4a23348)
+
+### program(Decoder)
+```
+Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
+Developed by:V.Prithviraj
+RegisterNumber:  21222100038
 
 
+module enc(a,b,c,d0,d1,d2,d3,d4,d5,d6,d7);
+input a,b,c;
+output d0,d1,d2,d3,d4,d5,d6,d7;
+assign d0 = (~a&~b&~c);
+assign d1 = (~a&~b&c);
+assign d2 = (~a&b&~c);
+assign d3 = (~a&b&c);
+assign d4 = (a&~b&~c);
+assign d5 = (a&~b&c);
+assign d6 = (a&b&~c);
+assign d7 = (a&b&c);
 
+endmodule 
+```
+### RTL LOGIC:
+![image](https://github.com/prithviraj5703/Experiment-08-Encoders-and-decoders-/assets/121418418/5ee803f4-4e10-4c29-926a-0a5c27d07b2e)
+### TIMING DIAGRAM
+![image](https://github.com/prithviraj5703/Experiment-08-Encoders-and-decoders-/assets/121418418/fcd67174-3116-4d57-8500-6247e9c41c2f)
+### TRUTH TABLE:
+![image](https://github.com/prithviraj5703/Experiment-08-Encoders-and-decoders-/assets/121418418/a7dd1397-46ce-4200-b510-6b5ed1d46919)
 
 
 ### RESULTS 
+Thus the program to desing encoder and decoder is done.
